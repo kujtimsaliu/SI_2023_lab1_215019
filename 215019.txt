@@ -1,0 +1,36 @@
+mkdir SI_2023_lab1_215019
+cd ./SI_2023_lab1_215019
+git init
+git remote add origin https://github.com/kujtimsaliu/SI_2023_lab1_215019.git
+notepad README.md
+git add README.md
+git commit -m "Initial commit"
+git add SILab1.java
+git commit -m "Add java class"
+git push origin --all
+git branch bug1
+git branch bug2
+git branch bug3
+git checkout bug1
+git commit -a -m "Fix wrong loop for reading"
+git checkout bug2
+git commit -a -m "Fix wrong condition in filterOddNumbers"
+git checkout bug3
+git commit -a -m "Fix method sumEvenNumbers"
+git checkout master
+git push origin --all
+git merge bug1
+git push origin --all
+git merge bug2
+git push origin --all
+git checkout bug3
+git rebase master
+git checkout master
+git merge bug3
+git push -u origin bug3 --force
+git log
+git add logs.txt
+git commit -m "Final commit"
+git add 215019.txt
+git commit -m "Final commit"
+
